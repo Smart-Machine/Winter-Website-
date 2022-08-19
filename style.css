@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+.background-image {
+    background-image: url("img/background_winter.jpg");
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+
+.main_container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+header, main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    padding: 1.2rem;
+}
+
+header > h1 {
+    font-size: 64px;
+    background: -webkit-linear-gradient(white, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: font-size 0.5s, background 2s;
+}
+
+header > h1:hover {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#c0c0aa, #1cefff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.grid-image-collection {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: 1fr;
+    padding-bottom: 10%;
+}
+
+.grid-image-collection > img {
+    border-radius: 8rem;
+    margin: auto;
+   /* box-shadow: 5px 10px #0000006c; */
+}
+
+@media screen and (max-width: 400px) {
+    .grid-image-collection > img {
+        transform: scale(0.3, 0.3);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-image-collection > img {
+        transform: scale(0.5, 0.5);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .grid-image-collection > img {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .grid-image-collection {
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+
+@media screen and (min-width: 1800px) {
+    .grid-image-collection {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+}
+
